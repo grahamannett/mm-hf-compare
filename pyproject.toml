@@ -1,0 +1,16 @@
+[project]
+    name = "mm-hf-compare"
+    version = "0.0.0"
+    description = "compare mm"
+    authors = [{ name = "graham", email = "graham.annett@gmail.com" }]
+    dependencies = []
+    requires-python = ">=3.11"
+    readme = "README.md"
+    license = "None"
+
+[build-system]
+    requires = ["pdm-backend"]
+    build-backend = "pdm.backend"
+
+[tool.pdm]
+    distribution = true
