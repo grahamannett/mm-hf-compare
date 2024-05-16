@@ -8,6 +8,15 @@ import numpy as np
 from tests.fixtures.get_fixtures import fixtures_data
 
 
+"""NOTE:
+Started moving the original code to torch, not entirely sure if it is fully
+working/correct but it is really not that important.  Original file is:
+
+https://huggingface.co/spaces/google/paligemma-hf/blob/main/app.py
+
+
+"""
+
 # "external/vae-oid.npz"
 _VAE_PARAMS_PATH = fixtures_data["external_fixtures_dir"] / fixtures_data["fixtures"]["vae"]["filename"]
 
@@ -149,6 +158,3 @@ if __name__ == "__main__":
     seg_arr = np.array(list(range(1, 17)), dtype=np.int32)
     seg_arr = torch.tensor(list(range(16), dtype=torch.int32))[None, ...]
     out = _get_reconstruct_mask()(seg_arr)
-    # seg_arr = torch.from_numpy(seg_arr)[None, ...]
-
-    # quantized = _quantized_values_from_codebook_indices(seg_arr, embeddings)
