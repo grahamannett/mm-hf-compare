@@ -8,7 +8,7 @@ import numpy as np
 from pathlib import Path
 
 import re
-from fixtures.vae_mask import _get_reconstruct_masks
+from tests.helpers.vae_mask import _get_reconstruct_masks
 import torch.nn as nn
 import functools
 

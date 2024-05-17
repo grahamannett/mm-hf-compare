@@ -163,3 +163,4 @@ cython_debug/
 
 tests/fixtures/images/*
 tests/fixtures/external/*
+webapp/**
