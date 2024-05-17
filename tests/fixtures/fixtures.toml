@@ -1,7 +1,6 @@
 image_fixtures_dir = "images"      # should be tests/fixtures/images
 external_fixtures_dir = "external" # should be tests/fixtures/external
 
-
 [[fixtures.images]]
     name = "puffin"
     url = "https://google-paligemma.hf.space/file=/tmp/gradio/78f93b49088f8d72ee546d656387403d647b413f/image.png"
@@ -11,6 +10,11 @@ external_fixtures_dir = "external" # should be tests/fixtures/external
     name = "bbox"
     url = "https://huggingface.co/datasets/hf-internal-testing/fixtures-captioning/resolve/main/bbox_sample_image.jpeg"
     filename = "bbox.jpg"
+
+[[fixtures.prompts]]
+    type = "segmentation"
+    prompt = "detect puffin in the back ; puffin in front"
+    images = ["puffin"]
 
 [fixtures.vae]
     name = "vae_oid"

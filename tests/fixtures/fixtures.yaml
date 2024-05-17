@@ -1,0 +1,22 @@
+image_fixtures_dir: images
+external_fixtures_dir: external
+# fixtures for images/tests
+fixtures:
+  images:
+    - &puffin-img
+      name: puffin
+      url: https://google-paligemma.hf.space/file=/tmp/gradio/78f93b49088f8d72ee546d656387403d647b413f/image.png
+      filename: puffin.png
+    - &bbox-img
+      name: bbox
+      url: https://huggingface.co/datasets/hf-internal-testing/fixtures-captioning/resolve/main/bbox_sample_image.jpeg
+      filename: bbox.jpg
+  prompts:
+    - type: segmentation
+      prompt: detect puffin in the back ; puffin in front
+      images:
+        - *puffin-img
+  vae:
+    name: vae_oid
+    url: https://huggingface.co/spaces/google/paligemma-hf/resolve/main/vae-oid.npz?download=true
+    filename: vae-oid.npz

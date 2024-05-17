@@ -18,7 +18,7 @@ def get_fixtures_data():
     return fixtures_data
 
 
-fixtures_data = get_fixtures_data
+fixtures_data = get_fixtures_data()
 
 
 # Function to download and save a file
